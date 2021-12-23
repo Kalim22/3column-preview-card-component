@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Kumbh+Sans&family=Lexend+Deca&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Kumbh+Sans&display=swap");
+*, body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .card {
+  width: 840px;
+  height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 6px;
+  -webkit-box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.1), -1px -1px 1px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 1px 1px 1px 0 rgba(0, 0, 0, 0.1), -1px -1px 1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.main .card .inner-card {
+  width: calc( 840px / 3);
+  height: 450px;
+}
+
+.main .card .inner-card:nth-child(1) {
+  background-color: #e38826;
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+.main .card .inner-card:nth-child(2) {
+  background-color: #006970;
+}
+
+.main .card .inner-card:nth-child(3) {
+  background-color: #004241;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.main .card .inner-card .image {
+  width: 100%;
+  height: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 35px;
+}
+
+.main .card .inner-card .image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 30%;
+  position: relative;
+  padding: 20px 0;
+}
+
+.main .card .inner-card .text {
+  width: 100%;
+  height: 250px;
+  padding: 10px 40px;
+}
+
+.main .card .inner-card .text h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.main .card .inner-card .text p {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 25px;
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+.main .card .inner-card .button {
+  width: 100%;
+  height: 90px;
+  padding: 0 40px;
+}
+
+.main .card .inner-card .button button {
+  background: none;
+  outline: none;
+  border: none;
+  border: 2px solid #fff;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-size: 15px;
+  background: #fff;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.main .card .inner-card .button button:hover {
+  background: none;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.main .card .inner-card .button .btn1 {
+  color: #e38826;
+}
+
+.main .card .inner-card .button .btn2 {
+  color: #006970;
+}
+
+.main .card .inner-card .button .btn3 {
+  color: #004241;
+}
+
+@media screen and (max-width: 375px) {
+  .main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 300px;
+    border-radius: 6px;
+  }
+  .main .card .inner-card {
+    width: 300px;
+  }
+  .main .card .inner-card:first-child {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom-left-radius: 0;
+  }
+  .main .card .inner-card:last-child {
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border-top-right-radius: 0;
+  }
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,123 @@
+// Fonts design
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Kumbh+Sans&family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Kumbh+Sans&display=swap')
+
+$Lexend-Deca: 'Lexend Deca', sans-serif
+$Big-shoulder-Display: 'Big Shoulders Display', sans-serif
+
+// Primary colors
+$Bright-orange: hsl(31, 77%, 52%)
+$Dark-cyan: hsl(184, 100%, 22%)
+$Very-dark-cyan: hsl(179, 100%, 13%)
+
+// Transparent colors
+$Transparent-white: hsla(0, 0%, 100%, 0.75) //(paragraphs)
+$Very-light-gray: hsl(0, 0%, 95%) //(background, headings, buttons)
+
+$wd: 840px
+    
+*, body
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+.main
+    width: 100%
+    height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    .card
+        width: $wd
+        height: 450px
+        display: flex
+        border-radius: 6px
+        box-shadow: 1px 1px 1px 0 rgba(0, 0, 0,0.1), -1px -1px 1px 0 rgba(0, 0, 0,0.1)
+        .inner-card
+            width: calc( 840px / 3 )
+            height: 450px
+            &:nth-child(1)
+                background-color: $Bright-orange
+                border-top-left-radius: 6px
+                border-bottom-left-radius: 6px
+            &:nth-child(2)
+                background-color: $Dark-cyan
+            &:nth-child(3)
+                background-color: $Very-dark-cyan
+                border-top-right-radius: 6px
+                border-bottom-right-radius: 6px
+            .image
+                width: 100%
+                height: 110px
+                display: flex
+                align-items: center
+                padding: 0 35px
+                img
+                    object-fit: cover
+                    width: 30%
+                    position: relative
+                    padding: 20px 0
+            .text
+                width: 100%
+                height: 250px
+                padding: 10px 40px
+                h1
+                    color: #fff
+                    text-transform: uppercase
+                    font-family: $Big-shoulder-Display
+                    font-weight: 700
+                    font-size: 36px
+                    margin-bottom: 20px
+                p
+                    color: $Transparent-white
+                    line-height: 25px
+                    font-size: 15px
+                    font-family: $Lexend-Deca
+            .button
+                width: 100%
+                height: 90px
+                padding: 0 40px
+                button
+                    background: none
+                    outline: none
+                    border: none
+                    border: 2px solid #fff
+                    border-radius: 25px
+                    padding: 10px 25px
+                    font-size: 15px
+                    background: #fff
+                    transition: 0.2s
+                    cursor: pointer
+                    &:hover
+                        background: none
+                        color: $Transparent-white
+                .btn1
+                    color: $Bright-orange
+                .btn2
+                    color: $Dark-cyan
+                .btn3
+                    color: $Very-dark-cyan
+
+//Media queries
+$breakpoint-width: 375px
+
+@media screen and ( max-width: $breakpoint-width)
+    .main
+        display: flex
+        justify-content: center
+        align-items: center
+        .card
+            display: flex
+            flex-direction: column
+            width: 300px
+            border-radius: 6px
+            .inner-card
+                width: 300px
+                &:first-child
+                    border-top-left-radius: 6px
+                    border-top-right-radius: 6px
+                    border-bottom-left-radius: 0
+                &:last-child
+                    border-bottom-left-radius: 6px
+                    border-bottom-right-radius: 6px
+                    border-top-right-radius: 0
